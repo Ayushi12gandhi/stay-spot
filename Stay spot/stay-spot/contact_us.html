@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - StaySpot</title>
+    <link rel="stylesheet" href="contact_us.css">
+    <script defer src="script5.js"></script>
+</head>
+<body>
+    <header>
+        <h1>StaySpot</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Rooms</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section class="contact-section">
+            <h2>Contact Us</h2>
+            <p>We're here to help you find your perfect stay. Reach out with any questions!</p>
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="tel" name="phone" placeholder="Your Phone Number" required>
+                <select name="inquiry" required>
+                    <option value="" disabled selected>Inquiry Type</option>
+                    <option value="booking">Booking</option>
+                    <option value="cancellation">Cancellation</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="others">Others</option>
+                </select>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            <div id="responseMessage"></div>
+        </section>
+    </main>
+</body>
+</html>

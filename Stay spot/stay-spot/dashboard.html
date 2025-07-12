@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NightStay Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css"/>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Stay<span>Spot</span></h2>
+    <ul>
+      <li class="active">Dashboard</li>
+    <li> <a href="list.html" class="listurl"> Listings</a></li>
+      <li>Reservations</li>
+      <li>Messages <span class="badge">3</span></li>
+      <li>Profile</li>
+      <li>Earnings</li>
+      <li>Settings</li>
+      <li>Logout</li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <div class="top-bar">
+      <h3>Welcome back, <span>Ayushman Somvanshi</span></h3>
+      <button class="new-btn">+ Add New Listing</button>
+    </div>
+
+    <div class="stats">
+      <div class="card animate">
+        <h4>Total Listings</h4>
+        <p>8 <span class="green">+2 from last month</span></p>
+      </div>
+      <div class="card animate delay-1">
+        <h4>Earnings This Month</h4>
+        <p>$4,285 <span class="green">+12%</span></p>
+      </div>
+      <div class="card animate delay-2">
+        <h4>Upcoming Reservations</h4>
+        <p>12 <span class="yellow">3 check-ins this week</span></p>
+      </div>
+    </div>
+
+    <div class="reservations">
+      <h3>Recent Reservations</h3>
+      <div class="res-list">
+        <div class="res-card animate">
+          <p><strong>John Smith</strong> · $745 · <span class="status confirmed">Confirmed</span></p>
+        </div>
+        <div class="res-card animate delay-1">
+          <p><strong>Emma Johnson</strong> · $1,890 · <span class="status pending">Pending</span></p>
+        </div>
+        <div class="res-card animate delay-2">
+          <p><strong>Michael Brown</strong> · $1,225 · <span class="status cancelled">Cancelled</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="listings-container" id="listingsContainer">
+  <!-- Cards will be added here -->
+</div>
+<!-- Modal Form -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Add New Listing</h2>
+    <form id="listingForm">
+      <label>Property Name</label>
+      <input type="text" required>
+
+      <label>Location</label>
+      <input type="text" required>
+
+      <label>Price per Night (in Ruppes)</label>
+      <input type="number" required>
+
+      <label>Status</label>
+      <select>
+        <option value="active">Active</option>
+        <option value="inactive">Inactive</option>
+      </select>
+
+      <label>Rating (1.0 - 5.0)</label>
+      <input type="number" min="1" max="5" step="0.1" required>
+
+      <button type="submit" class="submit-btn">Add Listing</button>
+    </form>
+  </div>
+</div>
+
+
+<script>
+  function openForm() {
+    document.getElementById("modal").style.display = "block";
+  }
+
+  document.getElementById("listingForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = this.querySelectorAll("input")[0].value;
+    const location = this.querySelectorAll("input")[1].value;
+    const price = this.querySelectorAll("input")[2].value;
+    const status = this.querySelector("select").value;
+    const rating = this.querySelectorAll("input")[3].value;
+
+    const listing = { name, location, price, status, rating };
+
+    // Save to localStorage
+    const listings = JSON.parse(localStorage.getItem("listings")) || [];
+    listings.push(listing);
+    localStorage.setItem("listings", JSON.stringify(listings));
+
+    // Reset & Close
+    this.reset();
+    document.getElementById("modal").style.display = "none";
+
+    // Optional: navigate directly to listings page
+    window.location.href = "list.html";
+  });
+</script>
+  <script src="script2.js"></script>
+</body>
+</html>

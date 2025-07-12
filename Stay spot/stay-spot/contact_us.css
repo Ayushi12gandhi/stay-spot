@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #000;
+}
+
+header h1 {
+    color: #f5c518;
+}
+
+nav a {
+    color: #f5c518;
+    margin-left: 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+.contact-section {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input, textarea, select {
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #2a2a2a;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+input:hover, textarea:hover, select:hover {
+    background-color: #333;
+}
+
+.submit-btn {
+    background-color: #f5c518;
+    color: #000;
+    padding: 0.8rem;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #fff;
+    transform: translateY(-3px);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+#responseMessage {
+    margin-top: 1rem;
+    text-align: center;
+    color: #f5c518;
+}

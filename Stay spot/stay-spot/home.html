@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StaySpot Navbar</title>
+  <link rel="stylesheet" href="home.css" />
+  <link rel="icon" href="logo.png" type="image/png">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="home.js"></script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">StaySpot</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Rooms</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="choose-role.html">Sign In</a></li>
+      <li><a href="sign-up-role.html" class="btn-signup">Sign Up</a></li>
+    </ul>
+  </nav>
+
+
+  
+  <section class="hero">
+    <h1><span>Find Your Perfect</span> <span class="highlight">Room</span></h1>
+    <p>Discover comfortable and affordable rooms in the best locations<br />around the world.</p>
+
+    <div class="search-box">
+      <div class="form-group">
+        <label>Location</label>
+        <div class="input-icon">
+          <i class="fas fa-map-marker-alt"></i>
+          <input type="text" placeholder="Where are you going?" id="location" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Check-in</label>
+        <div class="input-icon">
+          <i class="fas fa-calendar-alt"></i>
+          <input type="date" id="checkin" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Check-out</label>
+        <div class="input-icon">
+          <i class="fas fa-calendar-alt"></i>
+          <input type="date" id="checkout" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Guests</label>
+        <div class="input-icon">
+          <i class="fas fa-user"></i>
+          <select id="guests">
+            <option>1 Guest</option>
+            <option>2 Guests</option>
+            <option>3 Guests</option>
+            <option>4+ Guests</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="search-btn" onclick="searchRooms()">
+        <i class="fas fa-search"></i> Search Rooms
+      </button>
+    </div>
+  </section>
+<section class="features-section">
+    <h2>Why Choose <span class="highlight">StaySpot</span></h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="icon-circle"><i class="fas fa-map-marked-alt"></i></div>
+        <h3>Best Locations</h3>
+        <p>Find rooms in prime locations close to everything you need during your stay.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon-circle"><i class="fas fa-dollar-sign"></i></div>
+        <h3>Best Prices</h3>
+        <p>We guarantee the best rates with no hidden fees or surprise charges.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon-circle"><i class="fas fa-headset"></i></div>
+        <h3>24/7 Support</h3>
+        <p>Our customer service team is available around the clock to assist you.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter-section">
+    <div class="newsletter-box">
+      <div class="newsletter-text">
+        <h3>Subscribe to our newsletter</h3>
+        <p>Get the latest deals and special offers straight to your inbox.</p>
+      </div>
+      <div class="newsletter-form">
+        <input type="email" id="newsletterEmail" placeholder="Your email address" />
+        <button onclick="subscribe()">Subscribe</button>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>StaySpot</h3>
+      <p>Find your perfect room in the best locations worldwide.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Rooms</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="#">Cancellation Policy</a></li>
+        <li><a href="#">Safety Information</a></li>
+        <li><a href="#">Report Issue</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Contact Us</h4>
+      <p><i class="fas fa-map-marker-alt"></i> 123 Main Street, New York, NY 10001</p>
+      <p><i class="fas fa-phone-alt"></i> +1 (555) 123-4567</p>
+      <p><i class="fas fa-envelope"></i> info@stayspot.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2023 StaySpot. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Cookie Policy</a>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="home3.js"></script>
+  <script src="home2.js"></script>
+</body>
+</html>

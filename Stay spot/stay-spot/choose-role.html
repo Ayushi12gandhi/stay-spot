@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Choose Role | StaySpot</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body.role-body {
+      background-color: #0e0e0e;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .role-container {
+      background-color: #1c1c1c;
+      padding: 3rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 25px rgba(255, 193, 7, 0.2);
+      max-width: 400px;
+      width: 90%;
+    }
+
+    h1 {
+      margin-bottom: 2rem;
+      font-size: 1.8rem;
+    }
+
+    .role-btn {
+      display: block;
+      background-color: #ffc107;
+      color: #000;
+      text-decoration: none;
+      margin: 1rem 0;
+      padding: 0.8rem;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .role-btn:hover {
+      background-color: #e0a800;
+    }
+
+    .role-note {
+      margin-top: 1.5rem;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body class="role-body">
+  <div class="role-container">
+    <h1>Continue as a...</h1>
+    <a href="owner-signin.html" class="role-btn">Owner</a>
+    <a href="renter-signin.html" class="role-btn">Renter</a>
+    <p class="role-note">Select your role to proceed to sign in</p>
+  </div>
+</body>
+</html>
